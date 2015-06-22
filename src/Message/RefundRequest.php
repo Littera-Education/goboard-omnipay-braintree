@@ -17,7 +17,7 @@ class RefundRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $response = Braintree\Transaction::refund($data['transactionId'], $data['amount']);
+        $response = \Braintree_Transaction::refund($data['transactionId'], $data['amount']);
         return $this->response = new Response($this, $response);
     }
 

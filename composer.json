@@ -1,7 +1,7 @@
 {
-    "name": "sproutstudioinc/omnipay-braintree",
+    "name": "studysocial/omnipay-braintree",
     "type": "library",
-    "description": "Braintreepayments.com gateway for the Omnipay payment processing library",
+    "description": "Fork of sproutstudioinc/omnipay-braintree Braintreepayments.com gateway for the Omnipay payment processing library",
     "keywords": [
         "Braintree",
         "Braintreepayments",

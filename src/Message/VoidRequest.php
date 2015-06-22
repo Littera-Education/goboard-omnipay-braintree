@@ -10,7 +10,7 @@ class VoidRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $response = Braintree\Transaction::void($data);
+        $response = \Braintree_Transaction::void($data);
         return $this->response = new Response($this, $response);
     }
 }

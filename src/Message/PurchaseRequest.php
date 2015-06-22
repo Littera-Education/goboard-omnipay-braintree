@@ -20,7 +20,7 @@ class PurchaseRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $response = Braintree\Transaction::sale($data);
+        $response = \Braintree_Transaction::sale($data);
         return $this->response = new Response($this, $response);
     }
 

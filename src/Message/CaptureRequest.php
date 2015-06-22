@@ -15,7 +15,7 @@ class CaptureRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $response = Braintree\Transaction::submitForSettlement($data['transactionId'], $data['amount']);
+        $response = \Braintree_Transaction::submitForSettlement($data['transactionId'], $data['amount']);
         return $this->response = new Response($this, $response);
     }
 

@@ -11,11 +11,11 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     public function initialize(array $parameters = array())
     {
         $parentInitialize = Parent::initialize($parameters);
-        Braintree\Configuration::reset();
-        Braintree\Configuration::environment($this->getTestMode());
-        Braintree\Configuration::merchantId($this->getMerchantId());
-        Braintree\Configuration::publicKey($this->getPublicKey());
-        Braintree\Configuration::privateKey($this->getPrivateKey());
+        \Braintree_Configuration::reset();
+        \Braintree_Configuration::environment($this->getTestMode());
+        \Braintree_Configuration::merchantId($this->getMerchantId());
+        \Braintree_Configuration::publicKey($this->getPublicKey());
+        \Braintree_Configuration::privateKey($this->getPrivateKey());
 
         return $parentInitialize;
     }
