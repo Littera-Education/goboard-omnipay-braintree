@@ -92,7 +92,16 @@ class Gateway extends AbstractGateway
      */
     public function void(array $parameters = array())
     {
-        return $this->createRequest('\Sproutstudioinc\Beanstream\Message\VoidRequest', $parameters);
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\VoidRequest', $parameters);
+    }
+
+    /**
+     * @param array $parameters
+     * @return \Sproutstudioinc\Braintree\Message\VoidRequest
+     */
+    public function createCard(array $parameters = array())
+    {
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\CreateCardRequest', $parameters);
     }
 
 }

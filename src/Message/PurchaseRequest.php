@@ -10,7 +10,17 @@ class PurchaseRequest extends AbstractRequest
     {
         $this->validate('amount');
         $data['amount'] = $this->getAmount();
-        $data['creditCard'] = $this->getCardData();
+
+        $token = $this->getCardReference();
+        if($token) {
+            $data['paymentMethodToken'] = $token;
+        }else {
+            $card = $this->getCardData();
+            if ($card) {
+                $data['creditCard'] = $card;
+            }
+        }
+
         $data['options'] = array(
             'submitForSettlement' => true,
         );
@@ -23,5 +33,4 @@ class PurchaseRequest extends AbstractRequest
         $response = \Braintree_Transaction::sale($data);
         return $this->response = new Response($this, $response);
     }
-
 }
