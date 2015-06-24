@@ -1,7 +1,7 @@
 <?php
 namespace Sproutstudioinc\Braintree\Message;
 
-class CreateCardRequest extends AbstractRequest
+class CreateCustomerRequest extends AbstractRequest
 {
 
     public function getData()

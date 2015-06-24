@@ -97,7 +97,7 @@ class Gateway extends AbstractGateway
 
     /**
      * @param array $parameters
-     * @return \Sproutstudioinc\Braintree\Message\CreateCardRequest
+     * @return \Sproutstudioinc\Braintree\Message\CreateCustomerRequest
      */
     public function createCustomer(array $parameters = array())
     {
