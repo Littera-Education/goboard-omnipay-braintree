@@ -99,14 +99,14 @@ class Gateway extends AbstractGateway
      * @param array $parameters
      * @return \Sproutstudioinc\Braintree\Message\CreateCardRequest
      */
-    public function createCard(array $parameters = array())
+    public function createCustomer(array $parameters = array())
     {
-        return $this->createRequest('\Sproutstudioinc\Braintree\Message\CreateCardRequest', $parameters);
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\CreateCustomerRequest', $parameters);
     }
 
     /**
      * @param array $parameters
-     * @return \Sproutstudioinc\Braintree\Message\CreateCardRequest
+     * @return \Sproutstudioinc\Braintree\Message\GenerateClientTokenRequest
      */
     public function generateClientToken(array $parameters = array())
     {
