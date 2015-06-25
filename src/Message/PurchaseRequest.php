@@ -127,14 +127,24 @@ class PurchaseRequest extends AbstractRequest
         return $this->setParameter('deviceSessionId', $value);
     }
 
+    public function getMerchantAccountId()
+    {
+        return $this->getParameter('merchantAccountId');
+    }
+
+    public function setMerchantAccountId($value)
+    {
+        return $this->setParameter('merchantAccountId', $value);
+    }
+
     public function getOptions()
     {
-        return $this->getParameter('deviceSessionId');
+        return $this->getParameter('options');
     }
 
     public function setOptions($value)
     {
-        return $this->setParameter('deviceSessionId', $value);
+        return $this->setParameter('options', $value);
     }
 
     public function getOrderId()
