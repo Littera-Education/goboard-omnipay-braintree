@@ -121,4 +121,13 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Sproutstudioinc\Braintree\Message\CreateMerchantRequest', $parameters);
     }
+
+    /**
+     * @param array $parameters
+     * @return \Sproutstudioinc\Braintree\Message\ReleaseFromEscrowRequest
+     */
+    public function releaseFromEscrow(array $parameters = array())
+    {
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\ReleaseFromEscrowRequest', $parameters);
+    }
 }
