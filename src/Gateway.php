@@ -112,4 +112,13 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Sproutstudioinc\Braintree\Message\GenerateClientTokenRequest', $parameters);
     }
+
+    /**
+     * @param array $parameters
+     * @return \Sproutstudioinc\Braintree\Message\CreateMerchantRequest
+     */
+    public function createMerchant(array $parameters = array())
+    {
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\CreateMerchantRequest', $parameters);
+    }
 }
