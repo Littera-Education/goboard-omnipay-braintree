@@ -148,4 +148,13 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Sproutstudioinc\Braintree\Message\FindTransactionRequest', $parameters);
     }
+
+    /**
+     * @param array $parameters
+     * @return \Sproutstudioinc\Braintree\Message\VoidTransactionRequest
+     */
+    public function voidTransaction(array $parameters = array())
+    {
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\VoidTransactionRequest', $parameters);
+    }
 }
