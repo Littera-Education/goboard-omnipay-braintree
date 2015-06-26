@@ -6,15 +6,15 @@ class FindMerchantRequest extends AbstractRequest
 
     public function getData()
     {
-       $data = $this->getParameters();
+      /* $data = $this->getParameters();
 
        unset ($data["card"]);
        unset ($data["merchantId"]);
        unset ($data["privateKey"]);
        unset ($data["publicKey"]);
-       unset ($data["testMode"]);
+       unset ($data["testMode"]);*/
 
-        return $data;
+        return $this->getId();
     }
 
     public function sendData($data)
