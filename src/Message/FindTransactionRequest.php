@@ -13,7 +13,7 @@ class FindTransactionRequest extends AbstractRequest
 
     public function sendData($data)
     {
-        $response = \Braintree_Transaction::releaseFromEscrow($data);
+        $response = \Braintree_Transaction::find($data);
         return $this->response = new Response($this, $response);
     }
 
