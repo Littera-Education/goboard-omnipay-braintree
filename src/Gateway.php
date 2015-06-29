@@ -177,4 +177,14 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Sproutstudioinc\Braintree\Message\UpdateCustomerRequest', $parameters);
     }
+
+
+    /**
+     * @param array $parameters
+     * @return \Sproutstudioinc\Braintree\Message\FindCustomerRequest
+     */
+    public function findCustomer(array $parameters = array())
+    {
+        return $this->createRequest('\Sproutstudioinc\Braintree\Message\FindCustomerRequest', $parameters);
+    }
 }
